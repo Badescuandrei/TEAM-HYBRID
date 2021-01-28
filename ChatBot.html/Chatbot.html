@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Chatbot</title>
+    <style>
+        #chatLog{text-align: center;}
+        h2 {text-align: center;}
+        .myDiv {
+  text-align: center;
+}
+    </style>
+
+<script>
+    var know = {
+        "Schedule":"Please type the group and the day(EX:1242B Monday)",
+        "1242monday":"9-12:Image processing 12-14: FSE 14-16 : Foundamentals of management 16-18: Mobile systems",
+        "1242tuesday":"11-15: DICM 16-20: B&T",
+        "1242wednesday":"9-11: Mobile systems 15-19 DICM",
+        "1242thursday":"8-10 IP 12-14 FSE 16-18 Broadcasting",
+        "1242friday":"12-14 SE",
+        "1241monday":"9-11:<Mobile systems 14-16 : Foundamentals of management 16-18: SE",
+        "1241tuesday":"10-12: Management 12-14: SDT",
+        "1241wednesday":"9-11: Mobile systems 12-16 Bioinformatics",
+        "1241thursday":" 11-14 AI 14-16 Semantic Web",
+        "1241friday":"12-14 SE",
+        "1243monday":"8-10:HE  16-18: SE 14-16 : Foundamentals of management 16-18:AMPQ",
+        "1243tuesday":"8-10: Tribology 10-14: DIPC 14-16: Electronics" ,
+        "1243wednesday":"10-12: HE ",
+        "1243thursday":" 10-12 ME 2 11-14 Nanotech",
+        "1243friday":"9-12 Heat engines",
+        "Secretariat phone number":" What language department do you want to contact? ",
+        "English":"0715057125",
+        "German":"0715057125",
+        "French":"0715057125",
+        "Secretariat e-mail":"secretariat.fils@upb.ro",
+        "Address of the UPB":"București 060042",
+        "Teachers":"Maria Dascalu Bujor Pavaloiu Andrei Vasilateanu Constantin Vioreal Marian Neagu Ana Maria Iulia Cristina Stanica Alexandru Mitrea Iuliana Marin",
+        "Maria Dascalu": "email: maria.dascalu@upb.ro phone: 021 402 96 13",
+        "Bujor Pavaloiu" : "email: bujor.pavaloiu@upb.ro phone: 021 402 96 07",
+        "Andrei Vasilateanu" : "email: andrei.vasilateanu@upb.ro phone:021 402 96 52",
+        "Constantin Viorel Marian" : "email: constantin.v.marian@upb.com phone: 021 402 96 13",
+        "Iulia Cristina Stanica" : "email: iulia.stanica@upb.ro phone: 021 402 96 98",
+        "Alexandru Mitrea" : "email: alexandru.mitrea@upb.ro phone: 021 402 96 13",
+        "Exam List" : " Please input your group",
+        "1242B": " Mobile Systems 15.02.2021, FSE 11.02.2021, SE 17.02.2021",
+
+
+
+
+    };
+    function talk() {
+        var user=document.getElementById("userBox") .value;
+        document.getElementById("chatLog").innerHTML +=user+"<br>";
+        if (user in know){
+            document.getElementById("chatLog").innerHTML +=know[user]+"<br>";
+        }
+        else{
+            document.getElementById("chatLog").innerHTML+="Unfortunately you will have to write to secretariat@upb.ro for this<br>";}}
+
+
+
+</script>
+</head>
+
+<body>
+    
+    <div class="myDiv">
+        <img src="Fils.png" alt="Girl in a jacket" width="200" height="100">
+        <img src="navbar.png" alt="Girl in a jacket" width="1904" height="100">
+      </div>
+
+    <h1 id="chatLog">Hybrid<br></h1>
+    <div style="text-align:center;"><input id="userBox" type="text" onkeydown="if(event.keyCode == 13){talk()}"></div>
+    <h2>Greetings! I am Hybrid the online chatbot of FILS. Below you can see the commands that you can use .<br>
+        Schedule<br>
+        Secretariat phone number<br>
+        Secretariat e-mail<br>
+        Address of the UPB<br>
+        Teachers<br>
+        Exam List<br>
+    </h2>
+
+    
+</body>
+</html>
